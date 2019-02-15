@@ -4,14 +4,52 @@
 # Escrever na tela o dicionário 
 # {"nome":"Hector","idade":27,"email":"hector.silva@4linux.com.br"}
 
-for user in open('usuarios.csv'):
- nome,idade, email = user.split(',')
- print ({'nome': nome.strip(),
-         'idade' : int(idade.strip()) ,
-          'email' : email.strip()})
+meuovo = print
+lis = []
+def func (i):
+    return i['nome']
+
+for usr in open('usuarios.csv'):
+   nome,idade,email = usr.split(',')
+   lis.append ({'nome':nome.strip(),
+       'idade' : int(idade.strip()),
+       'email': email.strip()})
+# resolução com lambda   
+#   for i in sorted(lis, key=lambda i : i['nome']):
+#     meuovo (i)
+
+# resolução com função
+for i in sorted(lis, key=func):
+ meuovo (i)
+
+#           for n.append( in 
+
+exit() #retornar nomes ordernados
+nom = []
+for u in lis:
+    nom.append(u['nome'])
+
+for orde in sorted(nom):
+    print(orde)
+
+exit() # imprimir somente nomes   
+for u in lis:
+    print (u['nome'])
+
+
+
+
+
+
+
+
+
 
 exit()
-ide==int(idade)
+for user in open('usuarios.csv'):
+ nome,idade, email = user.split(',')
+ print ({'nome': nome.strip(),'idade' : int(idade.strip()) ,'email' : email.strip()})
+
 
 
 
