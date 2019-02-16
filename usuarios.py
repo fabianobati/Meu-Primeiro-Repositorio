@@ -2,24 +2,50 @@
 # Abrir o arquivo usuários
 #Separar os valores por ","
 # Escrever na tela o dicionário 
-# {"nome":"Hector","idade":27,"email":"hector.silva@4linux.com.br"}
+# {"nome":"Hector","idade":27,"email":"hector.silva@4linux.com.br"
 
-meuovo = print
+
 lis = []
-def func (i):
-    return i['nome']
 
 for usr in open('usuarios.csv'):
    nome,idade,email = usr.split(',')
-   lis.append ({'nome':nome.strip(),
-       'idade' : int(idade.strip()),
-       'email': email.strip()})
-# resolução com lambda   
-#   for i in sorted(lis, key=lambda i : i['nome']):
-#     meuovo (i)
+   lis.append ({'nome':nome.strip(),'idade' : int(idade.strip()),'email': email.strip()})
 
+for u in sorted(lis, key=lambda n : n['nome']):
+    print ('{0:.>20} {1:.>40}' .format (u['nome'], u['email'])  
+
+
+exit()
+meuovo = print
+lis = []
+def func (n):
+    return n['nome']
+
+def fprint(f):
+    return (['nome'],['email'])
+
+for usr in open('usuarios.csv'):
+   nome,idade,email = usr.split(',')
+   lis.append ({'nome':nome.strip(),'idade' : int(idade.strip()),'email': email.strip()})
+
+#for usur in sorted(lis, key=lambda l : l['nome']):
+#    meuovo (usur)
+
+for u in sorted(lis, key=lambda n : n['nome']):
+    meuovo ('{0:.>20} {1:.>40}' .format (u['nome'], u['email'])  #forma1
+#    meuovo ('{0[nome]:.>20} {0[email]:.>40}'.format(u))          #forma2
+    
+for i in sorted(lis, key=fprint())
+
+    
+
+# resolução com lambda   
+# for i in sorted(lis, key=lambda i : i['nome]):
+#     meuovo (i,e)
+
+exit ()
 # resolução com função
-for i in sorted(lis, key=func):
+for i in sorted(lis, key=func()):
  meuovo (i)
 
 #           for n.append( in 
@@ -35,14 +61,6 @@ for orde in sorted(nom):
 exit() # imprimir somente nomes   
 for u in lis:
     print (u['nome'])
-
-
-
-
-
-
-
-
 
 
 exit()
